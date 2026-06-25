@@ -185,6 +185,19 @@
         .spec-item h4 { font-size: 0.8rem; color: var(--primary-green); margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; }
         .spec-item p { font-size: 0.95rem; color: var(--dark); font-weight: 500; margin: 0; }
 
+        /* --- PROCESS --- */
+        .process { background: var(--white); }
+        .process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+        .process-card { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: var(--off-white); border-radius: 12px; overflow: hidden; border: 1px solid var(--light-gray); }
+        .process-image { min-height: 350px; background: var(--white); }
+        .process-image img { width: 100%; height: 100%; object-fit: cover; }
+        .process-content { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+        .process-content h3 { font-size: 1.5rem; color: var(--primary-green); margin-bottom: 1rem; font-weight: 600; }
+        .process-content p { color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; }
+        .process-highlights { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+        .process-highlights li { display: flex; align-items: center; gap: 0.7rem; color: var(--dark); font-size: 0.9rem; font-weight: 500; }
+        .process-highlights i { color: var(--gold); font-size: 0.85rem; }
+
         /* --- QUALITY --- */
         .quality { 
             background: var(--primary-green); color: var(--white); 
@@ -289,6 +302,9 @@
             .global-features { grid-template-columns: 1fr; }
             .footer-content { grid-template-columns: 1fr; }
             .specs-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; }
+            .process-card { grid-template-columns: 1fr; }
+            .process-image { min-height: 250px; }
         }
 
         @media (max-width: 480px) {
@@ -317,6 +333,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#products">Product</a></li>
+                <li><a href="#process">Process</a></li>
                 <li><a href="#quality">Quality</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -394,7 +411,7 @@
             <div class="product-showcase">
                 <div class="showcase-image">
                     <span class="showcase-badge">Premium Grade</span>
-                    <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Minyak Nilam / Patchouli Oil">
+                    <img src="contoh-produk-minyak-atsiri.jpg" alt="Minyak Nilam / Patchouli Oil">
                 </div>
                 <div class="showcase-details">
                     <h3>Nilam (Patchouli Oil)</h3>
@@ -421,6 +438,47 @@
                     </div>
 
                     <a href="#contact" class="btn btn-primary">Get Quotation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Process</h2>
+                <p>From sustainable cultivation to precision distillation — every drop tells a story</p>
+                <div class="divider"></div>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-image">
+                        <img src="flowchart-agrobisnis.png" alt="Agribusiness Flowchart - Sustainable Cultivation">
+                    </div>
+                    <div class="process-content">
+                        <h3>Sustainable Cultivation</h3>
+                        <p>Our patchouli is grown by local farmers using eco-friendly practices. We work directly with farming communities in Indonesia to ensure fair livelihoods and environmental stewardship.</p>
+                        <ul class="process-highlights">
+                            <li><i class="fas fa-check"></i> Organic farming methods</li>
+                            <li><i class="fas fa-check"></i> Community empowerment</li>
+                            <li><i class="fas fa-check"></i> Soil regeneration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-card">
+                    <div class="process-image">
+                        <img src="simple-technical-drawing-of-distillation-apparatus.png" alt="Distillation Apparatus - Steam Distillation Process">
+                    </div>
+                    <div class="process-content">
+                        <h3>Precision Steam Distillation</h3>
+                        <p>Freshly harvested leaves undergo steam distillation in our modern facility. Controlled temperature and pressure preserve the delicate Patchouli Alcohol compounds that define premium quality.</p>
+                        <ul class="process-highlights">
+                            <li><i class="fas fa-check"></i> Temperature-controlled</li>
+                            <li><i class="fas fa-check"></i> High Patchouli Alcohol yield</li>
+                            <li><i class="fas fa-check"></i> Zero solvent residue</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
