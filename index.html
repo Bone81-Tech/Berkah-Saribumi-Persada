@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berkah Saribumi Persada - Premium Patchouli Oil Indonesia</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Berkah Saribumi Persada - Premium Patchouli Oil Indonesia | Minyak Nilam Ekspor</title>
+    <meta name="title" content="Berkah Saribumi Persada - Premium Patchouli Oil Indonesia">
+    <meta name="description" content="Eksportir premium Patchouli Oil (Minyak Nilam) Indonesia. 100% murni, GC/MS tested, COA certified. Hubungi kami untuk quotation dan partnership global.">
+    <meta name="keywords" content="patchouli oil, minyak nilam, essential oil Indonesia, ekspor minyak atsiri, premium patchouli, Pogostemon cablin, nilam Indonesia">
+    <meta name="author" content="Berkah Saribumi Persada">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://berkahsaribumi.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://berkahsaribumi.com">
+    <meta property="og:title" content="Berkah Saribumi Persada - Premium Patchouli Oil Indonesia">
+    <meta property="og:description" content="Indonesia's finest patchouli oil for global perfumery and aromatherapy. 100% pure, lab tested, export quality.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://berkahsaribumi.com">
+    <meta property="twitter:title" content="Berkah Saribumi Persada - Premium Patchouli Oil Indonesia">
+    <meta property="twitter:description" content="Indonesia's finest patchouli oil for global perfumery and aromatherapy.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logosbp.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Berkah Saribumi Persada",
+        "description": "Premium Patchouli Oil Exporter from Indonesia",
+        "url": "https://berkahsaribumi.com",
+        "logo": "https://berkahsaribumi.com/logosbp.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-812-3456-7890",
+            "contactType": "customer service",
+            "email": "info@berkahsaribumi.com",
+            "availableLanguage": ["English", "Indonesian"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Surabaya",
+            "addressRegion": "East Java",
+            "addressCountry": "ID"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/berkahsaribumi",
+            "https://www.instagram.com/berkahsaribumi"
+        ]
+    }
+    </script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -20,6 +83,16 @@
             --dark: #1A1A1A;
             --gray: #6C757D;
             --light-gray: #E9ECEF;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.4s ease;
         }
 
         body {
@@ -28,50 +101,94 @@
             color: var(--dark);
             overflow-x: hidden;
             background-color: var(--white);
+            scroll-behavior: smooth;
         }
 
         h1, h2, h3, h4 { 
             font-family: 'Playfair Display', serif; 
             letter-spacing: -0.02em;
         }
-        img { max-width: 100%; height: auto; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: var(--transition-normal); }
 
         /* --- NAVIGATION --- */
         nav {
             position: fixed; top: 0; width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 1px 0 rgba(0,0,0,0.05);
-            z-index: 1000; padding: 0.8rem 0;
+            z-index: 1000; 
+            padding: 0.5rem 0;
+            transition: box-shadow var(--transition-normal);
         }
+        nav.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
         .nav-container {
             max-width: 1200px; margin: 0 auto; padding: 0 2rem;
             display: flex; justify-content: space-between; align-items: center;
         }
-        .logo { display: flex; align-items: center; gap: 0.8rem; }
-        .logo-icon { width: 45px; height: 45px; object-fit: contain; }
+        
+        /* --- LOGO (80px) --- */
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 1.1rem; 
+        }
+        .logo-icon { 
+            width: 80px;
+            height: 80px;
+            object-fit: contain; 
+            transition: transform var(--transition-normal);
+        }
+        .logo-icon:hover {
+            transform: scale(1.05);
+        }
         .logo-text {
-            font-family: 'Playfair Display', serif; font-size: 1.2rem;
-            font-weight: 700; color: var(--primary-green); line-height: 1.1;
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.65rem;
+            font-weight: 700; 
+            color: var(--primary-green); 
+            line-height: 1.1;
         }
         .logo-text span {
-            display: block; font-size: 0.65rem; font-family: 'Poppins', sans-serif;
-            color: var(--gold); font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+            display: block; 
+            font-size: 0.85rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--gold); 
+            font-weight: 500; 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase;
+            margin-top: 0.2rem;
         }
+        
         .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
         .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--dark); position: relative; }
         .nav-links a:hover { color: var(--primary-green); }
         .nav-links a::after {
             content: ''; position: absolute; bottom: -4px; left: 0;
-            width: 0; height: 1.5px; background: var(--gold); transition: 0.3s;
+            width: 0; height: 1.5px; background: var(--gold); transition: var(--transition-normal);
         }
         .nav-links a:hover::after { width: 100%; }
-        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-green); }
+
+        /* --- LANGUAGE TOGGLE --- */
+        .nav-right { display: flex; align-items: center; gap: 1rem; }
+        .lang-toggle { display: flex; align-items: center; gap: 0.1rem; }
+        .lang-btn {
+            background: none; border: none; cursor: pointer;
+            color: var(--gray); font-size: 0.75rem; font-weight: 600;
+            padding: 0.3rem 0.55rem; border-radius: 3px; transition: all var(--transition-fast);
+            font-family: 'Poppins', sans-serif; letter-spacing: 0.8px; text-transform: uppercase;
+        }
+        .lang-btn.active { color: var(--primary-green); background: rgba(15, 61, 46, 0.09); }
+        .lang-btn:hover:not(.active) { color: var(--dark); background: var(--light-gray); }
+        .lang-sep { color: #ced4da; font-size: 0.85rem; user-select: none; pointer-events: none; }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-green); background: none; border: none; }
 
         /* --- HERO SECTION --- */
         .hero {
-            margin-top: 65px; min-height: 95vh; display: flex; align-items: center;
+            margin-top: 90px;
+            min-height: 95vh; display: flex; align-items: center;
             position: relative; padding: 0; background: var(--dark-green); overflow: hidden;
         }
         .hero-bg {
@@ -97,9 +214,10 @@
         .btn {
             padding: 1rem 2.2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600;
             cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
-            letter-spacing: 0.5px; text-transform: uppercase; transition: all 0.3s ease;
+            letter-spacing: 0.5px; text-transform: uppercase; transition: all var(--transition-normal);
+            font-family: 'Poppins', sans-serif; border: none;
         }
-        .btn-primary { background: var(--gold); color: var(--dark-green); border: none; }
+        .btn-primary { background: var(--gold); color: var(--dark-green); }
         .btn-primary:hover { background: var(--white); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
         .btn-secondary { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.4); }
         .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
@@ -127,19 +245,30 @@
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
         /* --- SECTIONS GENERAL --- */
-        section { padding: 6rem 2rem; }
+        section { padding: var(--spacing-xl) var(--spacing-md); }
         .container { max-width: 1200px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header { text-align: center; margin-bottom: var(--spacing-lg); }
         .section-header h2 { font-size: 2.8rem; color: var(--primary-green); margin-bottom: 1rem; font-weight: 600; }
         .section-header p { color: var(--gray); font-size: 1.05rem; max-width: 550px; margin: 0 auto; font-weight: 300; }
         .section-header .divider { width: 60px; height: 3px; background: var(--gold); margin: 1.5rem auto 0; }
+
+        /* --- ANIMATION CLASSES --- */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* --- ABOUT --- */
         .about { background: var(--white); }
         .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
         .about-card {
             background: var(--white); padding: 2.5rem 2rem; border-radius: 8px;
-            text-align: center; transition: 0.4s; border: 1px solid var(--light-gray);
+            text-align: center; transition: all var(--transition-slow); border: 1px solid var(--light-gray);
         }
         .about-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-color: transparent; }
         .about-icon {
@@ -150,23 +279,19 @@
         .about-card h3 { font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--dark); font-weight: 600; }
         .about-card p { color: var(--gray); font-size: 0.95rem; line-height: 1.7; }
 
-        /* --- PRODUCT SHOWCASE (PATCHOULI) --- */
+        /* --- PRODUCT SHOWCASE --- */
         .products { background: var(--off-white); }
         .product-showcase {
             display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;
             background: var(--white); border-radius: 12px; overflow: hidden;
             box-shadow: 0 20px 50px rgba(0,0,0,0.04); border: 1px solid var(--light-gray);
         }
-        .showcase-image {
-            height: 100%; min-height: 500px; position: relative;
-        }
-        .showcase-image img {
-            width: 100%; height: 100%; object-fit: cover;
-        }
+        .showcase-image { height: 100%; min-height: 500px; position: relative; }
+        .showcase-image img { width: 100%; height: 100%; object-fit: cover; }
         .showcase-badge {
             position: absolute; top: 20px; left: 20px; background: var(--primary-green);
             color: var(--gold); padding: 0.5rem 1.2rem; border-radius: 4px; font-size: 0.7rem;
-            font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 1px; z-index: 2;
         }
         .showcase-details { padding: 3rem 3rem 3rem 0; }
         .showcase-details h3 {
@@ -185,18 +310,73 @@
         .spec-item h4 { font-size: 0.8rem; color: var(--primary-green); margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; }
         .spec-item p { font-size: 0.95rem; color: var(--dark); font-weight: 500; margin: 0; }
 
-        /* --- PROCESS --- */
+        /* --- PROCESS (DIPERBAIKI - Aspect Ratio 4:3) --- */
         .process { background: var(--white); }
-        .process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
-        .process-card { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: var(--off-white); border-radius: 12px; overflow: hidden; border: 1px solid var(--light-gray); }
-        .process-image { min-height: 350px; background: var(--white); }
-        .process-image img { width: 100%; height: 100%; object-fit: cover; }
-        .process-content { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
-        .process-content h3 { font-size: 1.5rem; color: var(--primary-green); margin-bottom: 1rem; font-weight: 600; }
-        .process-content p { color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; }
-        .process-highlights { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-        .process-highlights li { display: flex; align-items: center; gap: 0.7rem; color: var(--dark); font-size: 0.9rem; font-weight: 500; }
-        .process-highlights i { color: var(--gold); font-size: 0.85rem; }
+        .process-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+
+        .process-card { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 0;
+            background: var(--off-white); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            border: 1px solid var(--light-gray); 
+        }
+
+        .process-image { 
+            background: var(--white); 
+            position: relative;
+        }
+
+        .process-image img { 
+            width: 100%; 
+            height: auto; 
+            object-fit: contain;
+            object-position: center;
+            display: block;
+        }
+
+        .process-content { 
+            padding: 2.5rem; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+        }
+
+        .process-content h3 { 
+            font-size: 1.5rem; 
+            color: var(--primary-green); 
+            margin-bottom: 1rem; 
+            font-weight: 600; 
+        }
+
+        .process-content p { 
+            color: var(--gray); 
+            line-height: 1.7; 
+            margin-bottom: 1.5rem; 
+        }
+
+        .process-highlights { 
+            list-style: none; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 0.7rem; 
+        }
+
+        .process-highlights li { 
+            display: flex; 
+            align-items: center; 
+            gap: 0.7rem; 
+            color: var(--dark); 
+            font-size: 0.9rem; 
+            font-weight: 500; 
+        }
+
+        .process-highlights i { 
+            color: var(--gold); 
+            font-size: 0.85rem; 
+        }
 
         /* --- QUALITY --- */
         .quality { 
@@ -210,7 +390,8 @@
         .quality-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; position: relative; z-index: 1; }
         .quality-number { font-size: 3.5rem; font-weight: 600; color: var(--gold); display: block; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; }
         .quality-item p { opacity: 0.8; font-size: 1rem; font-weight: 300; }
-        .quality-item { padding: 2rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; }
+        .quality-item { padding: 2rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; transition: all var(--transition-normal); }
+        .quality-item:hover { background: rgba(255,255,255,0.05); transform: translateY(-5px); }
 
         /* --- GLOBAL --- */
         .global { background: var(--white); }
@@ -246,10 +427,31 @@
         .form-group label { display: block; margin-bottom: 0.5rem; color: var(--dark); font-weight: 500; font-size: 0.9rem; }
         .form-group input, .form-group textarea {
             width: 100%; padding: 1rem; border: 1px solid var(--light-gray); border-radius: 4px;
-            font-family: inherit; transition: 0.3s; background: var(--off-white); font-size: 0.9rem;
+            font-family: inherit; transition: all var(--transition-normal); background: var(--off-white); font-size: 0.9rem;
         }
-        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary-green); outline: none; background: var(--white); box-shadow: 0 0 0 3px rgba(15, 61, 46, 0.05); }
+        .form-group input:focus, .form-group textarea:focus { 
+            border-color: var(--primary-green); outline: none; background: var(--white); 
+            box-shadow: 0 0 0 3px rgba(15, 61, 46, 0.05); 
+        }
         .form-group textarea { resize: vertical; min-height: 130px; }
+        .form-group .error-message {
+            color: #dc3545; font-size: 0.8rem; margin-top: 0.3rem; display: none;
+        }
+        .form-group.error input, .form-group.error textarea {
+            border-color: #dc3545;
+        }
+        .form-group.error .error-message { display: block; }
+        
+        .form-success {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #28a745;
+        }
+        .form-success.show { display: block; }
 
         /* --- FOOTER --- */
         footer { background: var(--dark-green); color: var(--white); padding: 5rem 2rem 2rem; }
@@ -258,14 +460,14 @@
         .footer-section p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.5rem; }
         .footer-section ul { list-style: none; }
         .footer-section ul li { margin-bottom: 0.8rem; }
-        .footer-section ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; transition: 0.3s; }
+        .footer-section ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; transition: var(--transition-normal); }
         .footer-section ul li a:hover { color: var(--white); padding-left: 5px; }
         .social-links { display: flex; gap: 0.8rem; }
         .social-links a {
             width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 4px;
-            display: flex; align-items: center; justify-content: center; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1);
+            display: flex; align-items: center; justify-content: center; transition: var(--transition-normal); border: 1px solid rgba(255,255,255,0.1);
         }
-        .social-links a:hover { background: var(--gold); color: var(--dark-green); border-color: var(--gold); }
+        .social-links a:hover { background: var(--gold); color: var(--dark-green); border-color: var(--gold); transform: translateY(-3px); }
         .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); font-size: 0.85rem; }
 
         /* --- RESPONSIVE --- */
@@ -281,12 +483,19 @@
             .footer-content { grid-template-columns: 1fr 1fr; }
             .product-showcase { grid-template-columns: 1fr; }
             .showcase-details { padding: 2rem; }
+            
+            /* Logo tablet */
+            .logo-icon { width: 65px; height: 65px; }
+            .logo-text { font-size: 1.4rem; }
+            .logo-text span { font-size: 0.75rem; }
+            .logo { gap: 0.9rem; }
         }
 
         @media (max-width: 768px) {
             .nav-links {
                 position: absolute; top: 100%; left: 0; width: 100%;
                 background: rgba(255,255,255,0.98); backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
                 flex-direction: column; padding: 2rem; gap: 1.5rem;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.05);
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: 0.4s ease-in-out;
@@ -304,7 +513,17 @@
             .specs-grid { grid-template-columns: 1fr; }
             .process-grid { grid-template-columns: 1fr; }
             .process-card { grid-template-columns: 1fr; }
-            .process-image { min-height: 250px; }
+            .process-content { 
+                padding: 2rem; 
+            }
+            
+            /* Logo mobile */
+            .logo-icon { width: 55px; height: 55px; }
+            .logo-text { font-size: 1.2rem; }
+            .logo-text span { font-size: 0.65rem; letter-spacing: 1.2px; }
+            .logo { gap: 0.7rem; }
+            nav { padding: 0.4rem 0; }
+            .hero { margin-top: 75px; }
         }
 
         @media (max-width: 480px) {
@@ -314,331 +533,703 @@
             .hero-buttons { flex-direction: column; }
             .quality-grid { grid-template-columns: 1fr; }
             .showcase-details h3 { font-size: 2rem; }
+            .lang-btn { font-size: 0.7rem; padding: 0.25rem 0.45rem; }
+            
+            /* Logo small mobile */
+            .logo-icon { width: 48px; height: 48px; }
+            .logo-text { font-size: 1.05rem; }
+            .logo-text span { font-size: 0.6rem; letter-spacing: 1px; }
+            .logo { gap: 0.6rem; }
+            .nav-container { padding: 0 1rem; }
         }
     </style>
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="logosbp.png" alt="Berkah Saribumi Persada" class="logo-icon">
-                <div class="logo-text">
-                    Berkah Saribumi Persada
-                    <span>Premium Patchouli Oil</span>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="logosbp.png" alt="Berkah Saribumi Persada Logo" class="logo-icon" loading="eager">
+                    <div class="logo-text">
+                        Berkah Saribumi Persada
+                        <span data-key="logo-tag">Premium Patchouli Oil</span>
+                    </div>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" data-key="nav-home">Home</a></li>
+                    <li><a href="#about" data-key="nav-about">About</a></li>
+                    <li><a href="#products" data-key="nav-products">Product</a></li>
+                    <li><a href="#process" data-key="nav-process">Process</a></li>
+                    <li><a href="#quality" data-key="nav-quality">Quality</a></li>
+                    <li><a href="#contact" data-key="nav-contact">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="lang-toggle" role="group" aria-label="Language selector">
+                        <button class="lang-btn active" onclick="setLanguage('en')" data-lang="en" aria-label="Switch to English">EN</button>
+                        <span class="lang-sep" aria-hidden="true">|</span>
+                        <button class="lang-btn" onclick="setLanguage('id')" data-lang="id" aria-label="Switch to Indonesian">ID</button>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Product</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#quality">Quality</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-btn" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Indonesia's Finest <span>Patchouli Oil</span></h1>
-                <p>Sourced directly from the lush islands of Indonesia, our premium Patchouli Oil delivers an authentic, deep, and earthy aroma for global perfumery and aromatherapy.</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary">View Product</a>
-                    <a href="#contact" class="btn btn-secondary">Request Quote</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home" aria-labelledby="hero-heading">
+            <div class="hero-bg" role="presentation"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-heading" data-html-key="hero-h1">Indonesia's Finest <span>Patchouli Oil</span></h1>
+                    <p data-key="hero-p">Aggregated from patchouli-growing regions across the Indonesian archipelago, our premium Patchouli Oil delivers an authentic, deep, and earthy aroma for global perfumery and aromatherapy.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary" data-key="hero-btn1">View Product</a>
+                        <a href="#contact" class="btn btn-secondary" data-key="hero-btn2">Request Quote</a>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="hero-visual">
-                <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Patchouli Oil Bottle" class="hero-main-img">
-                <img src="https://images.unsplash.com/photo-1595981234058-a9302fb97229?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Patchouli Leaves" class="hero-secondary-img">
                 
-                <div class="hero-badge badge-1">
-                    <h3>100%</h3>
-                    <p>Pure & Natural</p>
-                </div>
-                <div class="hero-badge badge-2">
-                    <h3>GC/MS</h3>
-                    <p>Tested Quality</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Us</h2>
-                <p>Commitment to sustainability, purity, and global standards in every drop</p>
-                <div class="divider"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Eco-Sustainable</h3>
-                    <p>Responsibly harvested from local farmers, ensuring environmental preservation and community welfare.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon"><i class="fas fa-award"></i></div>
-                    <h3>Uncompromised Purity</h3>
-                    <p>Strict distillation processes yield high Patchouli Alcohol content, free from additives or synthetic fillers.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon"><i class="fas fa-globe-asia"></i></div>
-                    <h3>Export Expertise</h3>
-                    <p>Seamless logistics and documentation handling, delivering premium Indonesian Nilam to global markets efficiently.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Showcase Section -->
-    <section class="products" id="products">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Signature Product</h2>
-                <p>The essence of Indonesian soil, captured in a bottle</p>
-                <div class="divider"></div>
-            </div>
-            <div class="product-showcase">
-                <div class="showcase-image">
-                    <span class="showcase-badge">Premium Grade</span>
-                    <img src="contoh-produk-minyak-atsiri.jpg" alt="Minyak Nilam / Patchouli Oil">
-                </div>
-                <div class="showcase-details">
-                    <h3>Nilam (Patchouli Oil)</h3>
-                    <div class="subtitle">Pogostemon cablin</div>
-                    <p>Renowned for its rich, deep, and long-lasting earthy aroma, our Patchouli Oil is the top choice for high-end perfumeries, cosmetic formulations, and therapeutic aromatherapy. Distilled with precision to preserve its natural chemical profile.</p>
+                <div class="hero-visual" aria-hidden="true">
+                    <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Patchouli Oil Bottle" class="hero-main-img" loading="eager">
+                    <img src="https://images.unsplash.com/photo-1595981234058-a9302fb97229?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Patchouli Leaves" class="hero-secondary-img" loading="lazy">
                     
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <h4>Botanical Name</h4>
-                            <p>Pogostemon cablin</p>
-                        </div>
-                        <div class="spec-item">
-                            <h4>Main Compound</h4>
-                            <p>Patchouli Alcohol (Min 30%)</p>
-                        </div>
-                        <div class="spec-item">
-                            <h4>Aroma Profile</h4>
-                            <p>Earthy, Musky, Woody</p>
-                        </div>
-                        <div class="spec-item">
-                            <h4>Extraction</h4>
-                            <p>Steam Distilled</p>
-                        </div>
+                    <div class="hero-badge badge-1">
+                        <h3>100%</h3>
+                        <p data-key="badge1-p">Pure & Natural</p>
                     </div>
+                    <div class="hero-badge badge-2">
+                        <h3>GC/MS</h3>
+                        <p data-key="badge2-p">Tested Quality</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <a href="#contact" class="btn btn-primary">Get Quotation</a>
+        <!-- About Section -->
+        <section class="about" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="about-heading" data-key="about-h2">Why Choose Us</h2>
+                    <p data-key="about-sub">Commitment to sustainability, purity, and global standards in every drop</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card animate-on-scroll">
+                        <div class="about-icon" aria-hidden="true"><i class="fas fa-leaf"></i></div>
+                        <h3 data-key="c1-h3">Eco-Sustainable</h3>
+                        <p data-key="c1-p">Responsibly harvested from local farmers, ensuring environmental preservation and community welfare.</p>
+                    </div>
+                    <div class="about-card animate-on-scroll">
+                        <div class="about-icon" aria-hidden="true"><i class="fas fa-award"></i></div>
+                        <h3 data-key="c2-h3">Uncompromised Purity</h3>
+                        <p data-key="c2-p">Strict distillation processes yield high Patchouli Alcohol content, free from additives or synthetic fillers.</p>
+                    </div>
+                    <div class="about-card animate-on-scroll">
+                        <div class="about-icon" aria-hidden="true"><i class="fas fa-globe-asia"></i></div>
+                        <h3 data-key="c3-h3">Export Expertise</h3>
+                        <p data-key="c3-p">Seamless logistics and documentation handling, delivering premium Indonesian Nilam to global markets efficiently.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Process Section -->
-    <section class="process" id="process">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Process</h2>
-                <p>From sustainable cultivation to precision distillation — every drop tells a story</p>
-                <div class="divider"></div>
-            </div>
-            <div class="process-grid">
-                <div class="process-card">
-                    <div class="process-image">
-                        <img src="flowchart-agrobisnis.png" alt="Agribusiness Flowchart - Sustainable Cultivation">
-                    </div>
-                    <div class="process-content">
-                        <h3>Sustainable Cultivation</h3>
-                        <p>Our patchouli is grown by local farmers using eco-friendly practices. We work directly with farming communities in Indonesia to ensure fair livelihoods and environmental stewardship.</p>
-                        <ul class="process-highlights">
-                            <li><i class="fas fa-check"></i> Organic farming methods</li>
-                            <li><i class="fas fa-check"></i> Community empowerment</li>
-                            <li><i class="fas fa-check"></i> Soil regeneration</li>
-                        </ul>
-                    </div>
+        <!-- Product Showcase Section -->
+        <section class="products" id="products" aria-labelledby="prod-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="prod-heading" data-key="prod-h2">Our Signature Product</h2>
+                    <p data-key="prod-sub">The essence of Indonesian soil, captured in a bottle</p>
+                    <div class="divider"></div>
                 </div>
-                <div class="process-card">
-                    <div class="process-image">
-                        <img src="simple-technical-drawing-of-distillation-apparatus.png" alt="Distillation Apparatus - Steam Distillation Process">
+                <div class="product-showcase animate-on-scroll">
+                    <div class="showcase-image">
+                        <span class="showcase-badge" data-key="prod-badge">Premium Grade</span>
+                        <img src="contoh-produk-minyak-atsiri.jpg" alt="Minyak Nilam / Patchouli Oil Premium" loading="lazy">
                     </div>
-                    <div class="process-content">
-                        <h3>Precision Steam Distillation</h3>
-                        <p>Freshly harvested leaves undergo steam distillation in our modern facility. Controlled temperature and pressure preserve the delicate Patchouli Alcohol compounds that define premium quality.</p>
-                        <ul class="process-highlights">
-                            <li><i class="fas fa-check"></i> Temperature-controlled</li>
-                            <li><i class="fas fa-check"></i> High Patchouli Alcohol yield</li>
-                            <li><i class="fas fa-check"></i> Zero solvent residue</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="showcase-details">
+                        <h3>Nilam (Patchouli Oil)</h3>
+                        <div class="subtitle">Pogostemon cablin</div>
+                        <p data-key="prod-p">Renowned for its rich, deep, and long-lasting earthy aroma, our Patchouli Oil is the top choice for high-end perfumeries, cosmetic formulations, and therapeutic aromatherapy. Distilled with precision to preserve its natural chemical profile.</p>
+                        
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <h4 data-key="spec-l1">Botanical Name</h4>
+                                <p>Pogostemon cablin</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4 data-key="spec-l2">Main Compound</h4>
+                                <p>Patchouli Alcohol (Min 30%)</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4 data-key="spec-l3">Aroma Profile</h4>
+                                <p>Earthy, Musky, Woody</p>
+                            </div>
+                            <div class="spec-item">
+                                <h4 data-key="spec-l4">Extraction</h4>
+                                <p>Steam Distilled</p>
+                            </div>
+                        </div>
 
-    <!-- Quality Section -->
-    <section class="quality" id="quality">
-        <div class="container">
-            <div class="section-header">
-                <h2 style="color:white">Quality Assurance</h2>
-                <p style="color:rgba(255,255,255,0.6)">Certified excellence from source to shipment</p>
-                <div class="divider"></div>
-            </div>
-            <div class="quality-grid">
-                <div class="quality-item"><span class="quality-number">GC/MS</span><p>Lab Tested</p></div>
-                <div class="quality-item"><span class="quality-number">COA</span><p>Certificate of Analysis</p></div>
-                <div class="quality-item"><span class="quality-number">ISO</span><p>Standards Compliant</p></div>
-                <div class="quality-item"><span class="quality-number">100%</span><p>Pure & Unblended</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Section -->
-    <section class="global" id="global">
-        <div class="container">
-            <div class="global-content">
-                <div class="global-image">
-                        <img src="global-shipping.png" alt="Global Export Patchouli Oil">
+                        <a href="#contact" class="btn btn-primary" data-key="prod-cta">Get Quotation</a>
+                    </div>
                 </div>
-                <div class="global-text">
-                    <h2>Delivering Indonesian Aroma Worldwide</h2>
-                    <p>With extensive experience in essential oil export, we ensure your Patchouli Oil arrives safely and on time, regardless of your location. We handle the complexities of international trade so you can focus on your business.</p>
-                    <div class="global-features">
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-ship"></i></div>
-                            <div class="feature-text"><h4>Global Shipping</h4><p>Reliable delivery to major ports</p></div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process" id="process" aria-labelledby="proc-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="proc-heading" data-key="proc-h2">Our Process</h2>
+                    <p data-key="proc-sub">From sustainable cultivation to precision distillation — every drop tells a story</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="process-grid">
+                    <div class="process-card animate-on-scroll">
+                        <div class="process-image">
+                            <img src="flowchart-agrobisnis.png" alt="Agribusiness Flowchart - Sustainable Cultivation" loading="lazy" style="max-width: 100%; height: auto;">
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                            <div class="feature-text"><h4>Trade Assurance</h4><p>Secure and guaranteed transactions</p></div>
+                        <div class="process-content">
+                            <h3 data-key="p1-h3">Sustainable Cultivation</h3>
+                            <p data-key="p1-p">Our patchouli is grown by local farmers using eco-friendly practices. We work directly with farming communities in Indonesia to ensure fair livelihoods and environmental stewardship.</p>
+                            <ul class="process-highlights">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span data-key="p1-l1">Organic farming methods</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span data-key="p1-l2">Community empowerment</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span data-key="p1-l3">Soil regeneration</span></li>
+                            </ul>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
-                            <div class="feature-text"><h4>Full Documentation</h4><p>MSDS, COA, & custom paperwork</p></div>
+                    </div>
+                    <div class="process-card animate-on-scroll">
+                        <div class="process-image">
+                            <img src="simple-technical-drawing-of-distillation-apparatus.png" alt="Distillation Apparatus - Steam Distillation Process" loading="lazy" style="max-width: 100%; height: auto;">
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
-                            <div class="feature-text"><h4>Flexible Orders</h4><p>From sample sizes to bulk containers</p></div>
+                        <div class="process-content">
+                            <h3 data-key="p2-h3">Precision Steam Distillation</h3>
+                            <p data-key="p2-p">Freshly harvested leaves undergo steam distillation in our modern facility. Controlled temperature and pressure preserve the delicate Patchouli Alcohol compounds that define premium quality.</p>
+                            <ul class="process-highlights">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span data-key="p2-l1">Temperature-controlled</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span data-key="p2-l2">High Patchouli Alcohol yield</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span data-key="p2-l3">Zero solvent residue</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to source premium Indonesian Patchouli Oil?</p>
-                <div class="divider"></div>
+        <!-- Quality Section -->
+        <section class="quality" id="quality" aria-labelledby="qual-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="qual-heading" style="color:white" data-key="qual-h2">Quality Assurance</h2>
+                    <p style="color:rgba(255,255,255,0.6)" data-key="qual-sub">Certified excellence from source to shipment</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="quality-grid">
+                    <div class="quality-item animate-on-scroll"><span class="quality-number">GC/MS</span><p data-key="q-gc">Lab Tested</p></div>
+                    <div class="quality-item animate-on-scroll"><span class="quality-number">COA</span><p data-key="q-coa">Certificate of Analysis</p></div>
+                    <div class="quality-item animate-on-scroll"><span class="quality-number">ISO</span><p data-key="q-iso">Standards Compliant</p></div>
+                    <div class="quality-item animate-on-scroll"><span class="quality-number">100%</span><p data-key="q-pure">Pure & Unblended</p></div>
+                </div>
             </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Let's Discuss Your Needs</h3>
-                    <p style="color:var(--gray); line-height: 1.8;">Contact us for inquiries, quotations, or partnership opportunities. Our team is ready to assist you with specific volume requirements and quality specifications.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="contact-text"><h4>Office Address</h4><p>Jl. [Your Address]<br>Surabaya, Indonesia</p></div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-text"><h4>Email Us</h4><p>info@berkahsaribumi.com</p></div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div class="contact-text"><h4>Call Us</h4><p>+62 812 3456 7890</p></div>
+        </section>
+
+        <!-- Global Section -->
+        <section class="global" id="global" aria-labelledby="glob-heading">
+            <div class="container">
+                <div class="global-content">
+                    <div class="global-image animate-on-scroll">
+                        <img src="global-shipping.png" alt="Global Export Patchouli Oil" loading="lazy">
+                    </div>
+                    <div class="global-text animate-on-scroll">
+                        <h2 id="glob-heading" data-key="glob-h2">Delivering Indonesian Aroma Worldwide</h2>
+                        <p data-key="glob-p">With extensive experience in essential oil export, we ensure your Patchouli Oil arrives safely and on time, to any destination worldwide. Our multi-region sourcing network across Indonesia guarantees consistent supply and resilience year-round. We handle the complexities of international trade so you can focus on your business.</p>
+                        <div class="global-features">
+                            <div class="feature-item">
+                                <div class="feature-icon" aria-hidden="true"><i class="fas fa-ship"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-key="f1-h4">Global Shipping</h4>
+                                    <p data-key="f1-p">Reliable delivery to major ports</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-key="f2-h4">Trade Assurance</h4>
+                                    <p data-key="f2-p">Secure and guaranteed transactions</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon" aria-hidden="true"><i class="fas fa-file-contract"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-key="f3-h4">Full Documentation</h4>
+                                    <p data-key="f3-p">MSDS, COA, & custom paperwork</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-key="f4-h4">Flexible Orders</h4>
+                                    <p data-key="f4-p">From sample sizes to bulk containers</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your name" required></div>
-                        <div class="form-group"><label>Email Address *</label><input type="email" placeholder="your@email.com" required></div>
-                        <div class="form-group">
-                            <label>Volume Required (kg/liters)</label>
-                            <input type="text" placeholder="e.g., 100 kg">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact" aria-labelledby="con-heading">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="con-heading" data-key="con-h2">Get In Touch</h2>
+                    <p data-key="con-sub">Ready to source premium Indonesian Patchouli Oil?</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info animate-on-scroll">
+                        <h3 data-key="con-h3">Let's Discuss Your Needs</h3>
+                        <p style="color:var(--gray); line-height: 1.8;" data-key="con-p">Contact us for inquiries, quotations, or partnership opportunities. Our team is ready to assist you with specific volume requirements and quality specifications.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-text">
+                                    <h4 data-key="ci-office">Office Address</h4>
+                                    <p>Jl. [Your Address]<br>Surabaya, Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <h4 data-key="ci-email">Email Us</h4>
+                                    <p><a href="mailto:info@berkahsaribumi.com" style="color:var(--gray)">info@berkahsaribumi.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></div>
+                                <div class="contact-text">
+                                    <h4 data-key="ci-phone">Call Us</h4>
+                                    <p><a href="tel:+6281234567890" style="color:var(--gray)">+62 812 3456 7890</a></p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group"><label>Message *</label><textarea placeholder="Tell us about your requirements..." required></textarea></div>
-                        <button type="submit" class="btn btn-primary" style="width:100%; border-radius: 4px;">Send Message</button>
-                    </form>
+                    </div>
+                    <div class="contact-form animate-on-scroll">
+                        <div class="form-success" id="formSuccess" role="alert">
+                            <i class="fas fa-check-circle"></i> <span data-key="form-success">Thank you! Your message has been sent. We will contact you soon.</span>
+                        </div>
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name-input" data-key="fl-name">Full Name *</label>
+                                <input type="text" id="name-input" name="name" data-ph-key="fp-name" placeholder="Your name" required aria-required="true">
+                                <span class="error-message" data-key="err-name">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email-input" data-key="fl-email">Email Address *</label>
+                                <input type="email" id="email-input" name="email" data-ph-key="fp-email" placeholder="your@email.com" required aria-required="true">
+                                <span class="error-message" data-key="err-email">Please enter a valid email address</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="volume-input" data-key="fl-vol">Volume Required (kg/liters)</label>
+                                <input type="text" id="volume-input" name="volume" data-ph-key="fp-vol" placeholder="e.g., 100 kg">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-input" data-key="fl-msg">Message *</label>
+                                <textarea id="message-input" name="message" data-ph-key="fp-msg" placeholder="Tell us about your requirements..." required aria-required="true"></textarea>
+                                <span class="error-message" data-key="err-msg">Please enter your message</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%; border-radius: 4px;" data-key="f-submit">
+                                <i class="fas fa-paper-plane" style="margin-right: 0.5rem;" aria-hidden="true"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Berkah Saribumi Persada</h4>
-                <p>Your trusted partner for premium Indonesian Patchouli Oil. Bringing nature's finest essence to the global market.</p>
+                <p data-key="ft-tag">Your trusted partner for premium Indonesian Patchouli Oil. Bringing nature's finest essence to the global market.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/6281234567890" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h4 data-key="ft-ql">Quick Links</h4>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#products">Product</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-key="ft-lhome">Home</a></li>
+                    <li><a href="#about" data-key="ft-labout">About Us</a></li>
+                    <li><a href="#products" data-key="ft-lprod">Product</a></li>
+                    <li><a href="#contact" data-key="ft-lcon">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Product</h4>
+                <h4 data-key="ft-ph">Product</h4>
                 <ul>
-                    <li><a href="#products">Patchouli Oil (Nilam)</a></li>
+                    <li><a href="#products" data-key="ft-nilam">Patchouli Oil (Nilam)</a></li>
                     <li><a href="#quality">GC/MS Reports</a></li>
                     <li><a href="#quality">COA Document</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
+                <h4 data-key="ft-ch">Contact</h4>
                 <ul>
                     <li><a href="#">Surabaya, Indonesia</a></li>
-                    <li><a href="#">info@berkahsaribumi.com</a></li>
-                    <li><a href="#">+62 812 3456 7890</a></li>
+                    <li><a href="mailto:info@berkahsaribumi.com">info@berkahsaribumi.com</a></li>
+                    <li><a href="tel:+6281234567890">+62 812 3456 7890</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Berkah Saribumi Persada. All rights reserved.</p>
+            <p data-key="ft-copy">&copy; 2026 Berkah Saribumi Persada. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        /* =========================================================
+           TRANSLATIONS
+        ========================================================= */
+        const translations = {
+            en: {
+                'logo-tag':   'Premium Patchouli Oil',
+                'nav-home':     'Home', 'nav-about':    'About', 'nav-products': 'Product',
+                'nav-process':  'Process', 'nav-quality':  'Quality', 'nav-contact':  'Contact',
+                'hero-h1':  "Indonesia's Finest <span>Patchouli Oil</span>",
+                'hero-p':   'Aggregated from patchouli-growing regions across the Indonesian archipelago, our premium Patchouli Oil delivers an authentic, deep, and earthy aroma for global perfumery and aromatherapy.',
+                'hero-btn1': 'View Product', 'hero-btn2': 'Request Quote',
+                'badge1-p':  'Pure & Natural', 'badge2-p':  'Tested Quality',
+                'about-h2':  'Why Choose Us',
+                'about-sub': 'Commitment to sustainability, purity, and global standards in every drop',
+                'c1-h3': 'Eco-Sustainable', 'c1-p':  'Responsibly harvested from local farmers, ensuring environmental preservation and community welfare.',
+                'c2-h3': 'Uncompromised Purity', 'c2-p':  'Strict distillation processes yield high Patchouli Alcohol content, free from additives or synthetic fillers.',
+                'c3-h3': 'Export Expertise', 'c3-p':  'Seamless logistics and documentation handling, delivering premium Indonesian Nilam to global markets efficiently.',
+                'prod-h2':  'Our Signature Product', 'prod-sub': 'The essence of Indonesian soil, captured in a bottle',
+                'prod-badge': 'Premium Grade',
+                'prod-p':   'Renowned for its rich, deep, and long-lasting earthy aroma, our Patchouli Oil is the top choice for high-end perfumeries, cosmetic formulations, and therapeutic aromatherapy. Distilled with precision to preserve its natural chemical profile.',
+                'spec-l1': 'Botanical Name', 'spec-l2': 'Main Compound', 'spec-l3': 'Aroma Profile', 'spec-l4': 'Extraction',
+                'prod-cta': 'Get Quotation',
+                'proc-h2':  'Our Process',
+                'proc-sub': 'From sustainable cultivation to precision distillation — every drop tells a story',
+                'p1-h3': 'Sustainable Cultivation',
+                'p1-p':  'Our patchouli is grown by local farmers using eco-friendly practices. We work directly with farming communities in Indonesia to ensure fair livelihoods and environmental stewardship.',
+                'p1-l1': 'Organic farming methods', 'p1-l2': 'Community empowerment', 'p1-l3': 'Soil regeneration',
+                'p2-h3': 'Precision Steam Distillation',
+                'p2-p':  'Freshly harvested leaves undergo steam distillation in our modern facility. Controlled temperature and pressure preserve the delicate Patchouli Alcohol compounds that define premium quality.',
+                'p2-l1': 'Temperature-controlled', 'p2-l2': 'High Patchouli Alcohol yield', 'p2-l3': 'Zero solvent residue',
+                'qual-h2':  'Quality Assurance', 'qual-sub': 'Certified excellence from source to shipment',
+                'q-gc':   'Lab Tested', 'q-coa':  'Certificate of Analysis', 'q-iso':  'Standards Compliant', 'q-pure': 'Pure & Unblended',
+                'glob-h2': 'Delivering Indonesian Aroma Worldwide',
+                'glob-p':  'With extensive experience in essential oil export, we ensure your Patchouli Oil arrives safely and on time, to any destination worldwide. Our multi-region sourcing network across Indonesia guarantees consistent supply and resilience year-round. We handle the complexities of international trade so you can focus on your business.',
+                'f1-h4': 'Global Shipping',    'f1-p': 'Reliable delivery to major ports',
+                'f2-h4': 'Trade Assurance',    'f2-p': 'Secure and guaranteed transactions',
+                'f3-h4': 'Full Documentation', 'f3-p': 'MSDS, COA, & custom paperwork',
+                'f4-h4': 'Flexible Orders',    'f4-p': 'From sample sizes to bulk containers',
+                'con-h2':  'Get In Touch', 'con-sub': 'Ready to source premium Indonesian Patchouli Oil?',
+                'con-h3':  "Let's Discuss Your Needs",
+                'con-p':   'Contact us for inquiries, quotations, or partnership opportunities. Our team is ready to assist you with specific volume requirements and quality specifications.',
+                'ci-office': 'Office Address', 'ci-email':  'Email Us', 'ci-phone':  'Call Us',
+                'fl-name':  'Full Name *',          'fp-name':  'Your name',
+                'fl-email': 'Email Address *',      'fp-email': 'your@email.com',
+                'fl-vol':   'Volume Required (kg/liters)', 'fp-vol': 'e.g., 100 kg',
+                'fl-msg':   'Message *',             'fp-msg':  'Tell us about your requirements...',
+                'f-submit': 'Send Message',
+                'form-success': 'Thank you! Your message has been sent. We will contact you soon.',
+                'err-name': 'Please enter your name',
+                'err-email': 'Please enter a valid email address',
+                'err-msg': 'Please enter your message',
+                'ft-tag':   "Your trusted partner for premium Indonesian Patchouli Oil. Bringing nature's finest essence to the global market.",
+                'ft-ql':    'Quick Links',
+                'ft-lhome': 'Home', 'ft-labout': 'About Us', 'ft-lprod': 'Product', 'ft-lcon': 'Contact',
+                'ft-ph':    'Product', 'ft-nilam': 'Patchouli Oil (Nilam)',
+                'ft-ch':    'Contact',
+                'ft-copy':  '© 2026 Berkah Saribumi Persada. All rights reserved.'
+            },
+            id: {
+                'logo-tag':   'Minyak Nilam Premium',
+                'nav-home':     'Beranda', 'nav-about':    'Tentang', 'nav-products': 'Produk',
+                'nav-process':  'Proses', 'nav-quality':  'Kualitas', 'nav-contact':  'Kontak',
+                'hero-h1':  'Minyak Nilam <span>Terbaik Indonesia</span>',
+                'hero-p':   'Dikumpulkan dari berbagai daerah penghasil nilam di seluruh kepulauan Indonesia, minyak nilam premium kami menghadirkan aroma yang otentik, dalam, dan kaya untuk industri parfum dan aromaterapi global.',
+                'hero-btn1': 'Lihat Produk', 'hero-btn2': 'Minta Penawaran',
+                'badge1-p':  'Murni & Alami', 'badge2-p':  'Kualitas Teruji',
+                'about-h2':  'Mengapa Memilih Kami',
+                'about-sub': 'Komitmen terhadap keberlanjutan, kemurnian, dan standar global di setiap tetes',
+                'c1-h3': 'Ramah Lingkungan',
+                'c1-p':  'Dipanen secara bertanggung jawab dari petani lokal, menjaga kelestarian lingkungan dan kesejahteraan masyarakat.',
+                'c2-h3': 'Kemurnian Tanpa Kompromi',
+                'c2-p':  'Proses distilasi yang ketat menghasilkan kadar Patchouli Alcohol tinggi, bebas dari bahan tambahan atau pengisi sintetis.',
+                'c3-h3': 'Keahlian Ekspor',
+                'c3-p':  'Penanganan logistik dan dokumentasi yang lancar, mengantarkan Minyak Nilam Indonesia premium ke pasar global secara efisien.',
+                'prod-h2':  'Produk Unggulan Kami', 'prod-sub': 'Esensi tanah Indonesia, tersimpan dalam sebuah botol',
+                'prod-badge': 'Grade Premium',
+                'prod-p':   'Dikenal karena aromanya yang kaya, dalam, dan tahan lama, minyak nilam kami adalah pilihan utama untuk parfumeri kelas atas, formulasi kosmetik, dan aromaterapi terapeutik. Didistilasi dengan presisi untuk mempertahankan profil kimiawi alaminya.',
+                'spec-l1': 'Nama Botani', 'spec-l2': 'Senyawa Utama', 'spec-l3': 'Profil Aroma', 'spec-l4': 'Ekstraksi',
+                'prod-cta': 'Minta Penawaran',
+                'proc-h2':  'Proses Kami',
+                'proc-sub': 'Dari budidaya berkelanjutan hingga distilasi presisi — setiap tetes menyimpan cerita',
+                'p1-h3': 'Budidaya Berkelanjutan',
+                'p1-p':  'Nilam kami ditanam oleh petani lokal menggunakan praktik ramah lingkungan. Kami bekerja langsung dengan komunitas petani di seluruh Indonesia untuk memastikan penghidupan yang adil dan pengelolaan lingkungan yang baik.',
+                'p1-l1': 'Metode pertanian organik', 'p1-l2': 'Pemberdayaan komunitas', 'p1-l3': 'Regenerasi tanah',
+                'p2-h3': 'Distilasi Uap Presisi',
+                'p2-p':  'Daun yang baru dipanen menjalani proses distilasi uap di fasilitas modern kami. Suhu dan tekanan yang terkontrol mempertahankan senyawa Patchouli Alcohol yang mendefinisikan kualitas premium.',
+                'p2-l1': 'Suhu terkontrol', 'p2-l2': 'Hasil Patchouli Alcohol tinggi', 'p2-l3': 'Nol residu pelarut',
+                'qual-h2':  'Jaminan Kualitas', 'qual-sub': 'Keunggulan bersertifikat dari sumber hingga pengiriman',
+                'q-gc':   'Diuji di Laboratorium', 'q-coa':  'Sertifikat Analisis', 'q-iso':  'Sesuai Standar', 'q-pure': 'Murni & Tidak Tercampur',
+                'glob-h2': 'Mengantarkan Aroma Indonesia ke Seluruh Dunia',
+                'glob-p':  'Dengan pengalaman luas dalam ekspor minyak atsiri, kami memastikan Minyak Nilam Anda tiba dengan aman dan tepat waktu ke seluruh penjuru dunia. Jaringan pengadaan multi-wilayah kami di seluruh Indonesia menjamin pasokan yang konsisten dan andal sepanjang tahun. Kami menangani kompleksitas perdagangan internasional agar Anda dapat fokus pada bisnis Anda.',
+                'f1-h4': 'Pengiriman Global',    'f1-p': 'Pengiriman andal ke pelabuhan-pelabuhan utama',
+                'f2-h4': 'Jaminan Perdagangan', 'f2-p': 'Transaksi yang aman dan terjamin',
+                'f3-h4': 'Dokumentasi Lengkap', 'f3-p': 'MSDS, COA, & dokumen khusus',
+                'f4-h4': 'Pesanan Fleksibel',   'f4-p': 'Dari ukuran sampel hingga kontainer besar',
+                'con-h2':  'Hubungi Kami', 'con-sub': 'Siap mendapatkan Minyak Nilam Indonesia premium?',
+                'con-h3':  'Mari Diskusikan Kebutuhan Anda',
+                'con-p':   'Hubungi kami untuk pertanyaan, penawaran, atau peluang kemitraan. Tim kami siap membantu Anda dengan kebutuhan volume dan spesifikasi kualitas yang spesifik.',
+                'ci-office': 'Alamat Kantor', 'ci-email':  'Kirim Email', 'ci-phone':  'Telepon Kami',
+                'fl-name':  'Nama Lengkap *',               'fp-name':  'Nama Anda',
+                'fl-email': 'Alamat Email *',               'fp-email': 'email@anda.com',
+                'fl-vol':   'Volume yang Dibutuhkan (kg/liter)', 'fp-vol': 'mis., 100 kg',
+                'fl-msg':   'Pesan *',                       'fp-msg':  'Ceritakan kebutuhan Anda...',
+                'f-submit': 'Kirim Pesan',
+                'form-success': 'Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.',
+                'err-name': 'Silakan masukkan nama Anda',
+                'err-email': 'Silakan masukkan alamat email yang valid',
+                'err-msg': 'Silakan masukkan pesan Anda',
+                'ft-tag':   'Mitra terpercaya Anda untuk Minyak Nilam Indonesia premium. Membawa esensi terbaik alam ke pasar global.',
+                'ft-ql':    'Tautan Cepat',
+                'ft-lhome': 'Beranda', 'ft-labout': 'Tentang Kami', 'ft-lprod': 'Produk', 'ft-lcon': 'Kontak',
+                'ft-ph':    'Produk', 'ft-nilam': 'Patchouli Oil (Nilam)',
+                'ft-ch':    'Kontak',
+                'ft-copy':  '© 2026 Berkah Saribumi Persada. Hak cipta dilindungi.'
+            }
+        };
+
+        let currentLang = 'en';
+
+        /* =========================================================
+           LANGUAGE SWITCHER
+        ========================================================= */
+        function setLanguage(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.dataset.key;
+                if (translations[lang][key] !== undefined) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-html-key]').forEach(el => {
+                const key = el.dataset.htmlKey;
+                if (translations[lang][key] !== undefined) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-ph-key]').forEach(el => {
+                const key = el.dataset.phKey;
+                if (translations[lang][key] !== undefined) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================= */
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const isActive = navLinks.classList.toggle('active');
+            menuBtn.setAttribute('aria-expanded', isActive);
+            menuBtn.querySelector('i').classList.toggle('fa-bars', !isActive);
+            menuBtn.querySelector('i').classList.toggle('fa-times', isActive);
         }
 
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
+                const navLinks = document.getElementById('navLinks');
+                const menuBtn = document.querySelector('.mobile-menu-btn');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                    menuBtn.querySelector('i').classList.add('fa-bars');
+                    menuBtn.querySelector('i').classList.remove('fa-times');
+                }
             });
         });
 
-        window.addEventListener('scroll', () => {
+        /* =========================================================
+           SMOOTH SCROLL WITH OFFSET
+        ========================================================= */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const offset = 100;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        /* =========================================================
+           NAVBAR SCROLL EFFECT (DEBOUNCED)
+        ========================================================= */
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+        const handleScroll = () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+                nav.classList.add('scrolled');
             } else {
-                nav.style.boxShadow = 'none';
+                nav.classList.remove('scrolled');
             }
+        };
+
+        window.addEventListener('scroll', debounce(handleScroll, 10), { passive: true });
+
+        /* =========================================================
+           INTERSECTION OBSERVER FOR ANIMATIONS
+        ========================================================= */
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        /* =========================================================
+           FORM VALIDATION & SUBMISSION
+        ========================================================= */
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function showError(input, show) {
+            const formGroup = input.closest('.form-group');
+            if (show) {
+                formGroup.classList.add('error');
+            } else {
+                formGroup.classList.remove('error');
+            }
+        }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('name-input');
+            const emailInput = document.getElementById('email-input');
+            const messageInput = document.getElementById('message-input');
+            
+            let isValid = true;
+            
+            if (!nameInput.value.trim()) {
+                showError(nameInput, true);
+                isValid = false;
+            } else {
+                showError(nameInput, false);
+            }
+            
+            if (!emailInput.value.trim() || !validateEmail(emailInput.value)) {
+                showError(emailInput, true);
+                isValid = false;
+            } else {
+                showError(emailInput, false);
+            }
+            
+            if (!messageInput.value.trim()) {
+                showError(messageInput, true);
+                isValid = false;
+            } else {
+                showError(messageInput, false);
+            }
+            
+            if (!isValid) return;
+            
+            const formData = {
+                name: nameInput.value.trim(),
+                email: emailInput.value.trim(),
+                volume: document.getElementById('volume-input').value.trim(),
+                message: messageInput.value.trim(),
+                timestamp: new Date().toISOString()
+            };
+            
+            console.log('Form submitted:', formData);
+            
+            formSuccess.classList.add('show');
+            contactForm.reset();
+            
+            setTimeout(() => {
+                formSuccess.classList.remove('show');
+            }, 5000);
+        });
+
+        ['name-input', 'email-input', 'message-input'].forEach(id => {
+            const input = document.getElementById(id);
+            input.addEventListener('input', () => showError(input, false));
+        });
+
+        /* =========================================================
+           PERFORMANCE MONITORING
+        ========================================================= */
+        window.addEventListener('load', () => {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            if (perfData) {
+                console.log(`🚀 Page Load: ${Math.round(perfData.loadEventEnd - perfData.startTime)}ms`);
+                console.log(`📦 DOM Interactive: ${Math.round(perfData.domInteractive)}ms`);
+            }
+        });
+
+        /* =========================================================
+           INITIALIZE
+        ========================================================= */
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang && translations[savedLang]) {
+                setLanguage(savedLang);
+            }
+            handleScroll();
         });
     </script>
 </body>
